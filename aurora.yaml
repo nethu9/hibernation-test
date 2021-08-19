@@ -1,0 +1,22 @@
+apiVersion: prsn.io/v1
+kind: Aurora
+metadata:
+  name: nethu-aurora
+  namespace: nethutest
+spec:
+  allow_destroy: false
+  allow_modify: false
+  hibernate: false
+  options:
+    cluster:
+      engine: aurora-postgresql
+      # backup_retention_period: 5
+      # preferred_backup_window: "07:00-09:00"
+    instance:
+      count: 1
+      instance_class: db.r5.xlarge
+    cluster_parameter_group_params:
+      rds.logical_replication: 1
+      wal_sender_timeout: 0
+#    db_parameter_group_params:
+#        ...
