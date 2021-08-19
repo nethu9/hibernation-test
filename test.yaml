@@ -1,0 +1,11 @@
+project: nethu
+applications:
+  - name: nethu
+    runtime: nethu/ubuntu-nginx:1.15
+    dependencies:
+      - name: nethu
+        type: debian-package
+        origin:
+          build: nethu
+        version: 1.0.0
+    command: "/polarbear/run.sh"
