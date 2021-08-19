@@ -6,7 +6,7 @@ metadata:
 spec:
   allow_destroy: false
   allow_modify: false
-  hibernate: true
+  hibernate: nethu
   options:
     cluster:
       engine: aurora-postgresql
